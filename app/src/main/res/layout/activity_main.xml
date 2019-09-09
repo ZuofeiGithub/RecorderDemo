@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.testopensourceapplication.recorderdemo.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+      >
+
+        <SurfaceView
+            android:id="@+id/surfaceview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--录制的时间-->
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="25dp"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/recording"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="50dp"
+            android:src="@android:drawable/ic_notification_overlay"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_hud_record_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusDown="@+id/save"
+                android:nextFocusLeft="@+id/openfile"
+                android:nextFocusRight="@+id/save"
+                android:nextFocusUp="@+id/openfile"
+                android:text="开始录像"
+                android:textColor="#fff"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusDown="@+id/photo"
+                android:nextFocusLeft="@+id/start"
+                android:nextFocusRight="@+id/photo"
+                android:nextFocusUp="@+id/start"
+                android:textColor="#fff"
+                android:text="后台录像"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusDown="@+id/stop"
+                android:nextFocusLeft="@+id/save"
+                android:nextFocusRight="@+id/stop"
+                android:nextFocusUp="@+id/save"
+                android:textColor="#fff"
+                android:text="拍照"
+                android:textSize="30dp" />
+
+
+            <TextView
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/control_bg"
+                android:focusable="true"
+                android:gravity="center"
+                android:nextFocusDown="@+id/openfile"
+                android:nextFocusLeft="@+id/photo"
+                android:nextFocusRight="@+id/openfile"
+                android:nextFocusUp="@+id/photo"
+                android:textColor="#fff"
+                android:text="停止录像"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
